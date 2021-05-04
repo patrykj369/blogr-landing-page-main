@@ -1,0 +1,98 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 376px) {
+}
+.firstSection{
+    height: 70vh;
+    padding: 1rem;
+    background: url("./images/bg-pattern-intro.svg"), linear-gradient(175deg, #ff876f, #ff4252);
+    background-size: 150vh;
+    background-position: 34% 35%;
+    border-radius: 0 0 0 100px;
+}
+
+.icon-logo{
+    height: 2rem;
+    grid-column: 1;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.icon-hamburger{
+    height: 1.15rem;
+    margin-top: .5rem;
+    grid-column: 3;
+    /* justify-content: center;
+    align-content: center; */
+    
+}
+
+.headerMobile{
+    padding: 1rem;
+    height: 2rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 6rem 1fr 2rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.firstContent{
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 7rem;
+}
+
+.firstContent > h1{
+    font-size: 2.3rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.firstContent > h1 > span{
+    content: '\A';          /*rozdziela na nowa linie */
+    white-space: pre;       /*rozdziela na nowa linie */
+    font-size: 2.3rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.firstContent > p{
+    margin: 1rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.buttonStart{
+    height: 2.5rem;
+    width:8rem;
+    border-radius: 30px;
+    border: none;
+    color: #ff4252;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: .8rem;
+}
+
+.buttonLearn{
+    height: 2.5rem;
+    width:8rem;
+    border-radius: 30px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.buttonsDiv{
+    margin-top: 3rem;
+    text-align: center;
+}
