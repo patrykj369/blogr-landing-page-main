@@ -1,6 +1,6 @@
 body{
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -95,4 +95,123 @@ body{
 .buttonsDiv{
     margin-top: 3rem;
     text-align: center;
+}
+
+.secondSection{
+    text-align: center;
+}
+
+.secondSection > img{
+    width: 100vw;
+    margin-bottom: 3rem;
+}
+
+.secondSection > h2{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 5.5rem;
+}
+
+.thirdSection{
+    margin-top: -30px;
+    padding: 0 50px 0 50px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.thirdSection > h2{
+    font-weight: 600;
+    padding: 0 10px 0 10px;
+
+}
+
+.thirdSection > p{
+    line-height: 1.6rem;
+    color: rgb(109, 107, 107);
+    font-size: .95rem;
+}
+
+.fourthSection{
+    margin-top: 40px;
+}
+
+.fifthSection{
+    margin-top: 35vh;
+    background: url("./images/bg-pattern-circles.svg"),#353755;
+    background-size: 70vh;
+    background-repeat: no-repeat;
+    background-position: 51% -30vh;
+    height: 70vh;
+    border-radius: 0 100px 0 100px;
+    font-family: sans-serif;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 20vh 50vh;
+    margin-bottom: 50px;
+
+}
+.fifthContent{
+    grid-row: 2;
+    text-align: center;
+}
+
+.fifthContent > h2{
+    margin-top: 40px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.fifthContent > p{
+    padding: 0 40px 0 40px;
+    font-size: .95rem;
+    line-height: 1.6rem;
+}
+
+.phones{
+    width: 100vw;
+    margin-top: -200px;
+}
+
+.footerSection{
+    text-align: center;
+    background-color: #24242c;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: .95rem;
+    border-radius: 0 100px 0 0;
+    padding-bottom: 50px;
+}
+.footerSection > p{
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 45px;
+}
+
+.footerSection > ul > li > a{
+    text-decoration: none;
+    color: rgb(221, 217, 217);
+    font-family: sans-serif;
+    font-size: .95rem;
+}
+
+.footerSection > ul > li {
+    list-style-type: none;
+    
+}
+
+.footerSection > ul{
+    padding: 0;
+    line-height: 1.8rem;
+    
+}
+
+.footerSection > img{
+    height: 35px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.afterFooter{
+    margin-bottom: 80px;
 }
