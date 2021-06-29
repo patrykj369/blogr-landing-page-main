@@ -217,9 +217,13 @@ body{
     margin-bottom: 80px;
 }
 
+/* -------------------------------------- */
+/* expanded menu po kliknieciu hamburgera */
+/* -------------------------------------- */
+
 .menuMobileDiv{
     width: 90vw;
-    min-height: 50vh;
+    min-height: 55vh;
     z-index: 1;
     position: absolute;
     margin-top: 50px;
@@ -227,7 +231,9 @@ body{
     background: #fff;
     border-radius: 6px;
     box-shadow: 1px 10px 10px -4px #b5b5b8;
+
 }
+
 
 .productArrow{
     height: 8px;
@@ -260,4 +266,12 @@ body{
     margin: 15px auto;
     text-decoration: none;
     color: #000;
+}
+
+/* ------------------------------------ */
+/* formularz logowania w hamburger menu */
+/* ------------------------------------ */
+
+.mobile-login-form{
+    margin-bottom: 10px;
 }

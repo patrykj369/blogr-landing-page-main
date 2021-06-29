@@ -51,6 +51,17 @@ function showMobileMenu(){
         connectDiv.appendChild(connectArrow);
         menuDiv.appendChild(connectDiv);
 
+        const loginDiv = document.createElement("div");
+        loginDiv.classList.add("mobile-login-form");
+        const logP = document.createElement("button");
+        logP.innerText = "Login";
+        const signP = document.createElement("button");
+        signP.innerText = "Sign Up";
+
+        loginDiv.appendChild(logP);
+        loginDiv.appendChild(signP);
+        menuDiv.appendChild(loginDiv);
+
 
         const elem = document.getElementById("headerM");
         elem.appendChild(menuDiv);
