@@ -21,6 +21,21 @@ function showMobileMenu(){
         productDiv.appendChild(productArrow);
         menuDiv.appendChild(productDiv);
 
+        const companyDiv = document.createElement("div");
+        companyDiv.classList.add("productDiv");
+        companyDiv.id = "companyDiv";
+        companyDiv.onclick = (ev) => expandMenu(ev);
+        const company = document.createElement("p");
+        company.innerHTML = "Company";
+        company.classList.add("productP");
+        const companyArrow = document.createElement("img");
+        companyArrow.src = "./images/icon-arrow-dark.svg";
+        companyArrow.classList.add("productArrow");
+
+        companyDiv.appendChild(company);
+        companyDiv.appendChild(companyArrow);
+        menuDiv.appendChild(companyDiv);
+
 
         const elem = document.getElementById("headerM");
         elem.appendChild(menuDiv);
@@ -28,7 +43,7 @@ function showMobileMenu(){
         const elem = document.getElementById("menuMobileID");
         elem.remove();
     }
-    
+
 }
 
 function expandMenu(ev){
