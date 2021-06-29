@@ -20,7 +20,7 @@ body{
     grid-column: 1;
     justify-content: center;
     align-content: center;
-    
+
 }
 
 .icon-hamburger{
@@ -30,7 +30,7 @@ body{
     border: none;
     /* justify-content: center;
     align-content: center; */
-    
+
 }
 
 .headerMobile{
@@ -198,13 +198,13 @@ body{
 
 .footerSection > ul > li {
     list-style-type: none;
-    
+
 }
 
 .footerSection > ul{
     padding: 0;
     line-height: 1.8rem;
-    
+
 }
 
 .footerSection > img{
@@ -219,7 +219,7 @@ body{
 
 .menuMobileDiv{
     width: 90vw;
-    height: 62vh;
+    min-height: 50vh;
     z-index: 1;
     position: absolute;
     margin-top: 50px;
@@ -244,7 +244,6 @@ body{
 .productDiv{
     margin: 30px auto 0 auto;
     text-align: center;
-    height: 40px;
 }
 
 .expandedDiv{

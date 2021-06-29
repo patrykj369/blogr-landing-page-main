@@ -36,6 +36,21 @@ function showMobileMenu(){
         companyDiv.appendChild(companyArrow);
         menuDiv.appendChild(companyDiv);
 
+        const connectDiv = document.createElement("div");
+        connectDiv.classList.add("productDiv");
+        connectDiv.id = "connectDiv";
+        connectDiv.onclick = (ev) => expandMenu(ev);
+        const connect = document.createElement("p");
+        connect.innerHTML = "Connect";
+        connect.classList.add("productP");
+        const connectArrow = document.createElement("img");
+        connectArrow.src = "./images/icon-arrow-dark.svg";
+        connectArrow.classList.add("productArrow");
+
+        connectDiv.appendChild(connect);
+        connectDiv.appendChild(connectArrow);
+        menuDiv.appendChild(connectDiv);
+
 
         const elem = document.getElementById("headerM");
         elem.appendChild(menuDiv);
@@ -82,5 +97,80 @@ function expandMenu(ev){
             const elem = document.getElementById("expandedProduct");
             elem.remove();
         }
+    }else if(ev.target.id === "companyDiv"){
+
+        const sprawdz = document.getElementsByClassName("expandedDivProduct");
+        if(sprawdz.length === 0){
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("expandedDiv");
+        newDiv.classList.add("expandedDivProduct");
+        newDiv.id = "expandedProduct";
+
+        const overviewA = document.createElement("a");
+        overviewA.innerHTML = "Overview";
+        overviewA.href ="#";
+        newDiv.appendChild(overviewA);
+        const pricingA = document.createElement("a");
+        pricingA.innerHTML = "Pricing";
+        pricingA.href ="#";
+        newDiv.appendChild(pricingA);
+        const marketplaceA = document.createElement("a");
+        marketplaceA.innerHTML = "Marketplace";
+        marketplaceA.href ="#";
+        newDiv.appendChild(marketplaceA);
+        const featuresA = document.createElement("a");
+        featuresA.innerHTML = "Features";
+        featuresA.href ="#";
+        newDiv.appendChild(featuresA);
+        const integrationsA = document.createElement("a");
+        integrationsA.innerHTML = "Integrations";
+        integrationsA.href ="#";
+        newDiv.appendChild(integrationsA);
+
+        const elem = document.getElementById(ev.target.id);
+        elem.appendChild(newDiv);
+        }else{
+            const elem = document.getElementById("expandedProduct");
+            elem.remove();
+        }
+
+    }
+    else if(ev.target.id === "connectDiv"){
+
+        const sprawdz = document.getElementsByClassName("expandedDivProduct");
+        if(sprawdz.length === 0){
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("expandedDiv");
+        newDiv.classList.add("expandedDivProduct");
+        newDiv.id = "expandedProduct";
+
+        const overviewA = document.createElement("a");
+        overviewA.innerHTML = "Overview";
+        overviewA.href ="#";
+        newDiv.appendChild(overviewA);
+        const pricingA = document.createElement("a");
+        pricingA.innerHTML = "Pricing";
+        pricingA.href ="#";
+        newDiv.appendChild(pricingA);
+        const marketplaceA = document.createElement("a");
+        marketplaceA.innerHTML = "Marketplace";
+        marketplaceA.href ="#";
+        newDiv.appendChild(marketplaceA);
+        const featuresA = document.createElement("a");
+        featuresA.innerHTML = "Features";
+        featuresA.href ="#";
+        newDiv.appendChild(featuresA);
+        const integrationsA = document.createElement("a");
+        integrationsA.innerHTML = "Integrations";
+        integrationsA.href ="#";
+        newDiv.appendChild(integrationsA);
+
+        const elem = document.getElementById(ev.target.id);
+        elem.appendChild(newDiv);
+        }else{
+            const elem = document.getElementById("expandedProduct");
+            elem.remove();
+        }
+
     }
 }
