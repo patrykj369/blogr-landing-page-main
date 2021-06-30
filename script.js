@@ -6,6 +6,10 @@ function showMobileMenu(){
         menuDiv.classList.add("menuMobileDiv");
         menuDiv.id = "menuMobileID";
 
+        const firstMenu = document.createElement("div");
+        firstMenu.classList.add("firstMenu");
+        firstMenu.id = "firstMenuID";
+
         const productDiv = document.createElement("div");
         productDiv.classList.add("productDiv");
         productDiv.id = "productDiv";
@@ -13,13 +17,15 @@ function showMobileMenu(){
         const product = document.createElement("p");
         product.innerHTML = "Product";
         product.classList.add("productP");
+        product.id = "productPID"
         const productArrow = document.createElement("img");
         productArrow.src = "./images/icon-arrow-dark.svg";
         productArrow.classList.add("productArrow");
+        productArrow.id = "productArrowID";
 
         productDiv.appendChild(product);
         productDiv.appendChild(productArrow);
-        menuDiv.appendChild(productDiv);
+        firstMenu.appendChild(productDiv)
 
         const companyDiv = document.createElement("div");
         companyDiv.classList.add("productDiv");
@@ -34,7 +40,7 @@ function showMobileMenu(){
 
         companyDiv.appendChild(company);
         companyDiv.appendChild(companyArrow);
-        menuDiv.appendChild(companyDiv);
+        firstMenu.appendChild(companyDiv);
 
         const connectDiv = document.createElement("div");
         connectDiv.classList.add("productDiv");
@@ -49,19 +55,29 @@ function showMobileMenu(){
 
         connectDiv.appendChild(connect);
         connectDiv.appendChild(connectArrow);
-        menuDiv.appendChild(connectDiv);
+        firstMenu.appendChild(connectDiv);
 
         const loginDiv = document.createElement("div");
         loginDiv.classList.add("mobile-login-form");
-        const logP = document.createElement("button");
-        logP.innerText = "Login";
-        const signP = document.createElement("button");
-        signP.innerText = "Sign Up";
 
-        loginDiv.appendChild(logP);
-        loginDiv.appendChild(signP);
-        menuDiv.appendChild(loginDiv);
+        const logBtn = document.createElement("button");
+        logBtn.classList.add("login-button");
+        logBtn.innerText = "Login";
+        const signBtn = document.createElement("button");
+        signBtn.innerText = "Sign Up";
+        signBtn.classList.add("sign-in-button");
 
+        loginDiv.appendChild(logBtn);
+        loginDiv.appendChild(signBtn);
+
+        const secondMenu = document.createElement("div");
+        secondMenu.classList.add("secondMenu");
+        secondMenu.id = "secondMenuID";
+
+        secondMenu.appendChild(loginDiv);
+
+        menuDiv.appendChild(firstMenu);
+        menuDiv.appendChild(secondMenu);
 
         const elem = document.getElementById("headerM");
         elem.appendChild(menuDiv);
@@ -73,7 +89,7 @@ function showMobileMenu(){
 }
 
 function expandMenu(ev){
-    if(ev.target.id === "productDiv"){
+    if(ev.target.id === "productDiv" || ev.target.id === "productPID" || ev.target.id === "productArrowID"){
         const sprawdz = document.getElementsByClassName("expandedDivProduct");
         if(sprawdz.length === 0){
         const newDiv = document.createElement("div");
@@ -102,13 +118,13 @@ function expandMenu(ev){
         integrationsA.href ="#";
         newDiv.appendChild(integrationsA);
 
-        const elem = document.getElementById(ev.target.id);
+        const elem = document.getElementById("productDiv");
         elem.appendChild(newDiv);
         }else{
             const elem = document.getElementById("expandedProduct");
             elem.remove();
         }
-    }else if(ev.target.id === "companyDiv"){
+    }else if(ev.target.id === "companyDiv" || ev.target.id === "companyPID" || ev.target.id === "companyID"){
 
         const sprawdz = document.getElementsByClassName("expandedDivProduct");
         if(sprawdz.length === 0){
@@ -146,7 +162,7 @@ function expandMenu(ev){
         }
 
     }
-    else if(ev.target.id === "connectDiv"){
+    else if(ev.target.id === "connectDiv" || ev.target.id === "connectPID" || ev.target.id === "connectID"){
 
         const sprawdz = document.getElementsByClassName("expandedDivProduct");
         if(sprawdz.length === 0){

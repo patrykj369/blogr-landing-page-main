@@ -222,7 +222,7 @@ body{
 /* -------------------------------------- */
 
 .menuMobileDiv{
-    width: 90vw;
+    width: 85vw;
     min-height: 55vh;
     z-index: 1;
     position: absolute;
@@ -231,7 +231,9 @@ body{
     background: #fff;
     border-radius: 6px;
     box-shadow: 1px 10px 10px -4px #b5b5b8;
-
+    display: grid;
+    grid-template-rows: 1fr 15vh;
+    padding: 10px;
 }
 
 
@@ -256,7 +258,7 @@ body{
     width: 80vw;
     background: #efeff1;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     padding: 5px;
 }
 
@@ -268,10 +270,52 @@ body{
     color: #000;
 }
 
+#connectDiv{
+    margin: 30px auto 10px auto;
+}
+
 /* ------------------------------------ */
 /* formularz logowania w hamburger menu */
 /* ------------------------------------ */
 
 .mobile-login-form{
-    margin-bottom: 10px;
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.firstMenu{
+    grid-row: 1;
+}
+
+.secondMenu{
+    grid-row: 2;
+    border-top: 1px solid rgb(206, 205, 205);
+}
+
+.login-button{
+    margin: 5px auto;
+    height: 2.8rem;
+    width: 8rem;
+    border-radius: 24px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sign-in-button{
+    margin: 5px auto;
+    height: 2.8rem;
+    width: 8rem;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #f78e7a, #f3856f, #ff4252);
+
 }
