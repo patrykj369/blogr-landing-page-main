@@ -25,12 +25,21 @@ body{
 
 .icon-hamburger{
     background: url("images/icon-hamburger.svg");
-    height: 1.15rem;
+    background-repeat: no-repeat;
+    height: 1.25rem;
     grid-column: 3;
     border: none;
     /* justify-content: center;
     align-content: center; */
 
+}
+
+.icon-hamburger-x{
+    background: url("images/icon-close.svg");
+    background-repeat: no-repeat;
+    height: 2.3rem;
+    grid-column: 3;
+    border: none;
 }
 
 .headerMobile{

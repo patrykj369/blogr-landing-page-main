@@ -1,5 +1,18 @@
+function changeBurger(){
+    const burger = document.getElementById("icon-hamburger-id");
+
+    if(burger.classList.contains("icon-hamburger")){
+        burger.classList.remove("icon-hamburger");
+        burger.classList.add("icon-hamburger-x")
+    }else{
+        burger.classList.remove("icon-hamburger-x")
+        burger.classList.add("icon-hamburger");
+    }
+}
+
 function showMobileMenu(){
     const sprawdz = document.getElementsByClassName("menuMobileDiv");
+    changeBurger();
 
     if(sprawdz.length === 0){
         const menuDiv = document.createElement("div");
@@ -34,9 +47,11 @@ function showMobileMenu(){
         const company = document.createElement("p");
         company.innerHTML = "Company";
         company.classList.add("productP");
+        company.id = "companyPID";
         const companyArrow = document.createElement("img");
         companyArrow.src = "./images/icon-arrow-dark.svg";
         companyArrow.classList.add("productArrow");
+        companyArrow.id = "companyArrowID"
 
         companyDiv.appendChild(company);
         companyDiv.appendChild(companyArrow);
@@ -49,9 +64,11 @@ function showMobileMenu(){
         const connect = document.createElement("p");
         connect.innerHTML = "Connect";
         connect.classList.add("productP");
+        connect.id = "connectPID"
         const connectArrow = document.createElement("img");
         connectArrow.src = "./images/icon-arrow-dark.svg";
         connectArrow.classList.add("productArrow");
+        connectArrow.id = "connectArrowID";
 
         connectDiv.appendChild(connect);
         connectDiv.appendChild(connectArrow);
@@ -124,7 +141,7 @@ function expandMenu(ev){
             const elem = document.getElementById("expandedProduct");
             elem.remove();
         }
-    }else if(ev.target.id === "companyDiv" || ev.target.id === "companyPID" || ev.target.id === "companyID"){
+    }else if(ev.target.id === "companyDiv" || ev.target.id === "companyPID" || ev.target.id === "companyArrowID"){
 
         const sprawdz = document.getElementsByClassName("expandedDivProduct");
         if(sprawdz.length === 0){
@@ -133,28 +150,27 @@ function expandMenu(ev){
         newDiv.classList.add("expandedDivProduct");
         newDiv.id = "expandedProduct";
 
-        const overviewA = document.createElement("a");
-        overviewA.innerHTML = "Overview";
-        overviewA.href ="#";
-        newDiv.appendChild(overviewA);
-        const pricingA = document.createElement("a");
-        pricingA.innerHTML = "Pricing";
-        pricingA.href ="#";
-        newDiv.appendChild(pricingA);
-        const marketplaceA = document.createElement("a");
-        marketplaceA.innerHTML = "Marketplace";
-        marketplaceA.href ="#";
-        newDiv.appendChild(marketplaceA);
-        const featuresA = document.createElement("a");
-        featuresA.innerHTML = "Features";
-        featuresA.href ="#";
-        newDiv.appendChild(featuresA);
-        const integrationsA = document.createElement("a");
-        integrationsA.innerHTML = "Integrations";
-        integrationsA.href ="#";
-        newDiv.appendChild(integrationsA);
+        const aboutA = document.createElement("a");
+        aboutA.innerHTML = "About";
+        aboutA.href ="#";
+        newDiv.appendChild(aboutA);
 
-        const elem = document.getElementById(ev.target.id);
+        const teamA = document.createElement("a");
+        teamA.innerHTML = "Team";
+        teamA.href ="#";
+        newDiv.appendChild(teamA);
+
+        const blogA = document.createElement("a");
+        blogA.innerHTML = "Blog";
+        blogA.href ="#";
+        newDiv.appendChild(blogA);
+
+        const careersA = document.createElement("a");
+        careersA.innerHTML = "Careers";
+        careersA.href ="#";
+        newDiv.appendChild(careersA);
+
+        const elem = document.getElementById("companyDiv");
         elem.appendChild(newDiv);
         }else{
             const elem = document.getElementById("expandedProduct");
@@ -162,7 +178,7 @@ function expandMenu(ev){
         }
 
     }
-    else if(ev.target.id === "connectDiv" || ev.target.id === "connectPID" || ev.target.id === "connectID"){
+    else if(ev.target.id === "connectDiv" || ev.target.id === "connectPID" || ev.target.id === "connectArrowID"){
 
         const sprawdz = document.getElementsByClassName("expandedDivProduct");
         if(sprawdz.length === 0){
@@ -171,28 +187,22 @@ function expandMenu(ev){
         newDiv.classList.add("expandedDivProduct");
         newDiv.id = "expandedProduct";
 
-        const overviewA = document.createElement("a");
-        overviewA.innerHTML = "Overview";
-        overviewA.href ="#";
-        newDiv.appendChild(overviewA);
-        const pricingA = document.createElement("a");
-        pricingA.innerHTML = "Pricing";
-        pricingA.href ="#";
-        newDiv.appendChild(pricingA);
-        const marketplaceA = document.createElement("a");
-        marketplaceA.innerHTML = "Marketplace";
-        marketplaceA.href ="#";
-        newDiv.appendChild(marketplaceA);
-        const featuresA = document.createElement("a");
-        featuresA.innerHTML = "Features";
-        featuresA.href ="#";
-        newDiv.appendChild(featuresA);
-        const integrationsA = document.createElement("a");
-        integrationsA.innerHTML = "Integrations";
-        integrationsA.href ="#";
-        newDiv.appendChild(integrationsA);
+        const contactA = document.createElement("a");
+        contactA.innerHTML = "Contact";
+        contactA.href ="#";
+        newDiv.appendChild(contactA);
 
-        const elem = document.getElementById(ev.target.id);
+        const newsletterA = document.createElement("a");
+        newsletterA.innerHTML = "Newsletter";
+        newsletterA.href ="#";
+        newDiv.appendChild(newsletterA);
+
+        const linkedinA = document.createElement("a");
+        linkedinA.innerHTML = "LinkedIn";
+        linkedinA.href ="#";
+        newDiv.appendChild(linkedinA);
+
+        const elem = document.getElementById("connectDiv");
         elem.appendChild(newDiv);
         }else{
             const elem = document.getElementById("expandedProduct");
