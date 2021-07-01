@@ -4,8 +4,8 @@ body{
     box-sizing: border-box;
 }
 
-@media (max-width: 376px) {
-}
+@media only screen and (max-width: 420px) {
+
 .firstSection{
     height: 70vh;
     padding: 1rem;
@@ -328,4 +328,12 @@ body{
     font-weight: 600;
     background: linear-gradient(90deg, #f78e7a, #f3856f, #ff4252);
 
+}
+
+}
+
+@media only screen and (min-width: 421px){
+    #icon-hamburger-id{
+        display: none;
+    }
 }
