@@ -231,12 +231,12 @@ body{
 /* -------------------------------------- */
 
 .menuMobileDiv{
-    width: 85vw;
+    width: 84vw;
     min-height: 55vh;
     z-index: 1;
     position: absolute;
-    margin-top: 50px;
-    left: 5vw;
+    margin: 50px auto 0 auto;
+    left: calc(8vw - 15px);
     background: #fff;
     border-radius: 6px;
     box-shadow: 1px 10px 10px -4px #b5b5b8;
