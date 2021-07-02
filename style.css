@@ -20,7 +20,6 @@ body{
     grid-column: 1;
     justify-content: center;
     align-content: center;
-
 }
 
 .icon-hamburger{
@@ -105,6 +104,10 @@ body{
 .buttonsDiv{
     margin-top: 3rem;
     text-align: center;
+}
+
+.buttonsDivDesktop{
+    display: none;
 }
 
 .secondSection{
@@ -336,4 +339,135 @@ body{
     #icon-hamburger-id{
         display: none;
     }
+
+    .firstSection{
+        height: 55vh;
+        padding: 1rem;
+        background: url("./images/bg-pattern-intro.svg"), linear-gradient(90deg, #fd7c63,#ff4252, rgb(129, 31, 11));
+        background-size: 390vh;
+        background-position: 24% 52%;
+        border-radius: 0 0 0 100px;
+    }
+
+    .headerMobile{
+        display: grid;
+        grid-auto-columns: .2fr 1fr 1fr;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+        padding: 30px;
+    }
+
+    .icon-logo{
+        height: 3rem;
+        grid-column: 1;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .buttonsDiv{
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .buttonsDivDesktop{
+        text-align: right;
+        grid-column: 3;
+    }
+
+    .buttonStart{
+        height: 2.5rem;
+        width:8rem;
+        border-radius: 30px;
+        border: none;
+        color: #ff4252;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-right: .8rem;
+        cursor: pointer;
+    }
+    .buttonStart:hover{
+        background: rgba(250, 250, 250, 0.185);
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .buttonLearn{
+        height: 2.5rem;
+        width:8rem;
+        border-radius: 30px;
+        background: none;
+        border: 1px solid #fff;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .buttonLearn:hover{
+        color: #ff4252;
+        background-color: #fff;
+    }
+
+    .buttonLogSign{
+        height: 2.5rem;
+        width:8rem;
+        border-radius: 30px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .buttonSignIn{
+        color: #ff4252;
+        background-color: #fff;
+    }
+
+    .buttonSignIn:hover{
+        color: #fff;
+    }
+
+    .buttonLogSign:hover{
+        background: rgba(250, 250, 250, 0.185);
+        cursor: pointer;
+    }
+
+    .desktopMenu{
+        display: flex;
+        grid-column: 2;
+    }
+
+    .singleMenu{
+        margin: 0 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.3rem;
+        font-family: sans-serif;
+    }
+
+    .firstContent{
+        margin-top: 3vh;
+        padding: 20px;
+        font-family: sans-serif;
+
+        text-align: center;
+    }
+
+    .firstContent > h1{
+        color: #fff;
+        font-size: 3.2rem;
+        font-weight: 400;
+        margin: 10px;
+    }
+
+    .firstContent > p{
+        color: rgba(255, 255, 255, 0.719);
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+
 }
