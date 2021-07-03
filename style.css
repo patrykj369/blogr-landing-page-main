@@ -2,6 +2,8 @@ body{
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 @media only screen and (max-width: 420px) {
@@ -477,5 +479,89 @@ body{
         margin: 0;
     }
 
+    /* stylowanie sekcji zaraz pod banerem glownym */
+
+    .secondDiv{
+        height: 66vh;
+    }
+
+    .secondSectionDesktopText > h2{
+        margin-top: 12vh;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .secondSectionDesktopImg{
+        float: right;
+        height: 80vh;
+    }
+
+    .secondSectionDesktopImg > img{
+        height: 85vh;
+        margin-right: -9.8rem;
+        margin-top: -6rem;
+    }
+
+    .thirdSection{
+        padding: 2rem 5rem 2rem 5rem;
+        margin-left: 2rem;
+        width: 50vw;
+    }
+
+    .thirdSection > h2{
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    .thirdSection > p{
+        line-height: 2.1rem;
+        padding-right: 5rem;
+    }
+
+    /* stylowanie sekcji z state of the Art Infrastructure */
+
+    .fifthSection{
+        width: 100vw;
+        height: 45vh;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        background: url("./images/bg-pattern-circles.svg"),#353755;
+        background-size: 120vh;
+        background-repeat: no-repeat;
+        background-position: -60% 80%;
+        border-radius: 0 100px 0 100px;
+
+        color: #fff;
+    }
+
+    .phones{
+        grid-column: 1;
+        position: absolute;
+        height: 65vh;
+        margin-top: -5rem;
+        margin-left: 5rem;
+    }
+
+    .fifthContent{
+        grid-column: 2;
+        margin-right: 10rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        align-content: left;
+        flex-direction: column;
+
+        line-height: 2rem;
+    }
+
+    .fifthContent > h2{
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin: 5px 0;
+    }
 
 }
