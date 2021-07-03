@@ -19,13 +19,13 @@
       <button class="icon-hamburger" id="icon-hamburger-id" onclick="showMobileMenu()"></button>
 
       <div class="desktopMenu">
-        <div class="singleMenu">
-          <p>Product <img src="./images/icon-arrow-light.svg" alt =""></img></p>
+        <div class="singleMenu" id="singleMenuProduct">
+          <p onclick="showAllMenu(event)" id="menuProduct">Product <img src="./images/icon-arrow-light.svg" alt ="" id="menuProductBtn"></img></p>
         </div>
-        <div class="singleMenu">
+        <div class="singleMenu" id="singleMenuCompany">
           <p>Company <img src="./images/icon-arrow-light.svg" alt =""></img></p>
         </div>
-        <div class="singleMenu">
+        <div class="singleMenu" id="singleMenuContent">
           <p>Connect <img src="./images/icon-arrow-light.svg" alt =""></img></p>
         </div>
       </div>
@@ -89,49 +89,64 @@
     </div>
   </section>
 
-  <section class="secondSection">
-    <img src="images/illustration-laptop-mobile.svg">
-  </section>
+  <div class="freeSection">
+    <section class="secondSection freeGridFirst">
+      <img src="images/illustration-laptop-mobile.svg">
+    </section>
 
-  <section class="thirdSection">
-    <h2>Free, open, simple</h2>
-    <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
-      features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-      and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-  </section>
+    <div class="freeGrid">
+      <section class="thirdSection freeGridText">
+      <h2>Free, open, simple</h2>
+      <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+    </section>
 
-  <section class="thirdSection fourthSection afterFooter">
-    <h2>Powerful tooling</h2>
-    <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-      capable of producing even the most complicated sites.</p>
-  </section>
+    <section class="thirdSection fourthSection afterFooter freeGridText">
+      <h2>Powerful tooling</h2>
+      <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+        capable of producing even the most complicated sites.</p>
+    </section>
+    </div>
+
+
+  </div>
 
   <section class="footerSection">
     <img src="./images/logo.svg">
-    <p>Product</p>
-    <ul>
-      <li><a href="#">Overview</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Marketplace</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Integrations</a></li>
-    </ul>
 
-    <p>Company</p>
-    <ul>
-      <li><a href="#"About</a></li>
-      <li><a href="#">Team</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Careers</a></li>
-    </ul>
+      <div class="footerProduct footerList">
+        <p>Product</p>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+    </div>
 
-    <p>Connect</p>
-    <ul>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Newsletter</a></li>
-      <li><a href="#">Linkedin</a></li>
-    </ul>
+    <div class="footerCompany footerList">
+      <p>Company</p>
+      <ul>
+        <li><a href="#"About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="footerConnect footerList">
+      <p>Connect</p>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Linkedin</a></li>
+      </ul>
+    </div>
+
   </section>
+
   <script src="./script.js"></script>
 </body>
 </html>

@@ -211,3 +211,40 @@ function expandMenu(ev){
 
     }
 }
+
+function showAllMenu(event){
+
+    const divMenu = document.createElement("div");
+    divMenu.className = "menuProductDekstop";
+
+    const pOverview = document.createElement("p");
+    pOverview.innerText = "Overview";
+    pOverview.classList = "pTextMenuDesktop";
+
+    const pPricing = document.createElement("p");
+    pPricing.innerText = "Pricing";
+    pPricing.classList = "pTextMenuDesktop";
+
+    const pMarketplace = document.createElement("p");
+    pMarketplace.innerText = "Marketplace";
+    pMarketplace.classList = "pTextMenuDesktop";
+
+    const pFeatures = document.createElement("p");
+    pFeatures.innerText = "Features";
+    pFeatures.classList = "pTextMenuDesktop";
+
+    const pIntegrations = document.createElement("p");
+    pIntegrations.innerText = "Integrations";
+    pIntegrations.classList = "pTextMenuDesktop";
+
+    divMenu.appendChild(pOverview);
+    divMenu.appendChild(pPricing);
+    divMenu.appendChild(pMarketplace);
+    divMenu.appendChild(pFeatures);
+    divMenu.appendChild(pIntegrations);
+
+
+    const doc = document.getElementById("singleMenuProduct");
+    doc.appendChild(divMenu);
+
+}

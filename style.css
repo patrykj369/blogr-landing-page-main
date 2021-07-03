@@ -196,32 +196,33 @@ body{
     font-size: .95rem;
     border-radius: 0 100px 0 0;
     padding-bottom: 50px;
+    padding-top: 3rem;
 }
-.footerSection > p{
+.footerList > p{
     font-weight: 600;
     margin-bottom: 30px;
     margin-top: 45px;
 }
 
-.footerSection > ul > li > a{
+.footerList > ul > li > a{
     text-decoration: none;
     color: rgb(221, 217, 217);
     font-family: sans-serif;
     font-size: .95rem;
 }
 
-.footerSection > ul > li {
+.footerList > ul > li {
     list-style-type: none;
 
 }
 
-.footerSection > ul{
+.footerList > ul{
     padding: 0;
     line-height: 1.8rem;
 
 }
 
-.footerSection > img{
+.footerList > img{
     height: 35px;
     margin-top: 60px;
     margin-bottom: 10px;
@@ -564,4 +565,99 @@ body{
         margin: 5px 0;
     }
 
+    /* stylowanie sekcji free open simple */
+
+    .freeSection{
+        margin-top: 22rem;
+        height: 60vh;
+        display: grid;
+
+        grid-template-columns: 1fr 1.4fr;
+        grid-template-rows: 1fr;
+    }
+
+    .freeGridFirst{
+        grid-column: 1;
+    }
+
+    .freeGridFirst > img{
+        height: 85vh;
+        margin-left: -19rem;
+        margin-top: -10rem;
+    }
+
+    .freeGrid{
+        margin: -.5rem 5rem auto -5rem;
+    }
+
+    .freeGridText > p{
+        max-width: 38vw;
+    }
+
+    /* stylowanie sekcji stopki */
+
+    .footerSection{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        margin-top: 15rem;
+        height: 20vh;
+        padding: 5rem 10rem;
+
+        background:#24242c;
+        color: #fff;
+        border-radius: 0 100px 0 0;
+    }
+
+    .footerList > ul > li {
+        list-style-type: none;
+
+    }
+
+    .footerList > ul{
+        padding: 0;
+        line-height: 1.8rem;
+
+    }
+
+    .footerList > ul > li > a{
+        text-decoration: none;
+        color: rgba(221, 217, 217, 0.747);
+        font-family: sans-serif;
+        font-size: 1rem;
+    }
+
+    .footerList > p{
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footerSection > img{
+        height: 4rem;
+    }
+
+    .footerList{
+        margin: 0 10rem;
+    }
+
+    /* expanded menu */
+
+    .menuProductDekstop{
+        width: 9rem;
+        min-height: 8rem;
+        background-color: white;
+        z-index: 1;
+        position: absolute;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+
+    .pTextMenuDesktop{
+        color: #000;
+        font-size: 1rem;
+    }
+
+    .pTextMenuDesktop:hover {
+        font-weight: 600;
+    }
 }
