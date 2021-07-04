@@ -10,4 +10,4 @@ I used JS, CSS and HTML - only.
 
 I designed the desktop and mobile version page.
 
-On this link, you can watch my page:
+On this link, you can watch my page: https://patrykj369.github.io/blogr
