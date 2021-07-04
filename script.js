@@ -182,28 +182,28 @@ function expandMenu(ev){
 
         const sprawdz = document.getElementsByClassName("expandedDivProduct");
         if(sprawdz.length === 0){
-        const newDiv = document.createElement("div");
-        newDiv.classList.add("expandedDiv");
-        newDiv.classList.add("expandedDivProduct");
-        newDiv.id = "expandedProduct";
+            const newDiv = document.createElement("div");
+            newDiv.classList.add("expandedDiv");
+            newDiv.classList.add("expandedDivProduct");
+            newDiv.id = "expandedProduct";
 
-        const contactA = document.createElement("a");
-        contactA.innerHTML = "Contact";
-        contactA.href ="#";
-        newDiv.appendChild(contactA);
+            const contactA = document.createElement("a");
+            contactA.innerHTML = "Contact";
+            contactA.href ="#";
+            newDiv.appendChild(contactA);
 
-        const newsletterA = document.createElement("a");
-        newsletterA.innerHTML = "Newsletter";
-        newsletterA.href ="#";
-        newDiv.appendChild(newsletterA);
+            const newsletterA = document.createElement("a");
+            newsletterA.innerHTML = "Newsletter";
+            newsletterA.href ="#";
+            newDiv.appendChild(newsletterA);
 
-        const linkedinA = document.createElement("a");
-        linkedinA.innerHTML = "LinkedIn";
-        linkedinA.href ="#";
-        newDiv.appendChild(linkedinA);
+            const linkedinA = document.createElement("a");
+            linkedinA.innerHTML = "LinkedIn";
+            linkedinA.href ="#";
+            newDiv.appendChild(linkedinA);
 
-        const elem = document.getElementById("connectDiv");
-        elem.appendChild(newDiv);
+            const elem = document.getElementById("connectDiv");
+            elem.appendChild(newDiv);
         }else{
             const elem = document.getElementById("expandedProduct");
             elem.remove();
@@ -212,39 +212,115 @@ function expandMenu(ev){
     }
 }
 
-function showAllMenu(event){
+function showAllMenu(type){
 
-    const divMenu = document.createElement("div");
-    divMenu.className = "menuProductDekstop";
+    if(type === "menuProduct"){
+        if(!document.getElementById("menuProductDekstopID")){
+            const divMenu = document.createElement("div");
+            divMenu.className = "menuProductDekstop";
+            divMenu.id = "menuProductDekstopID";
 
-    const pOverview = document.createElement("p");
-    pOverview.innerText = "Overview";
-    pOverview.classList = "pTextMenuDesktop";
+            const pOverview = document.createElement("p");
+            pOverview.innerText = "Overview";
+            pOverview.classList = "pTextMenuDesktop";
 
-    const pPricing = document.createElement("p");
-    pPricing.innerText = "Pricing";
-    pPricing.classList = "pTextMenuDesktop";
+            const pPricing = document.createElement("p");
+            pPricing.innerText = "Pricing";
+            pPricing.classList = "pTextMenuDesktop";
 
-    const pMarketplace = document.createElement("p");
-    pMarketplace.innerText = "Marketplace";
-    pMarketplace.classList = "pTextMenuDesktop";
+            const pMarketplace = document.createElement("p");
+            pMarketplace.innerText = "Marketplace";
+            pMarketplace.classList = "pTextMenuDesktop";
 
-    const pFeatures = document.createElement("p");
-    pFeatures.innerText = "Features";
-    pFeatures.classList = "pTextMenuDesktop";
+            const pFeatures = document.createElement("p");
+            pFeatures.innerText = "Features";
+            pFeatures.classList = "pTextMenuDesktop";
 
-    const pIntegrations = document.createElement("p");
-    pIntegrations.innerText = "Integrations";
-    pIntegrations.classList = "pTextMenuDesktop";
+            const pIntegrations = document.createElement("p");
+            pIntegrations.innerText = "Integrations";
+            pIntegrations.classList = "pTextMenuDesktop";
 
-    divMenu.appendChild(pOverview);
-    divMenu.appendChild(pPricing);
-    divMenu.appendChild(pMarketplace);
-    divMenu.appendChild(pFeatures);
-    divMenu.appendChild(pIntegrations);
+            divMenu.appendChild(pOverview);
+            divMenu.appendChild(pPricing);
+            divMenu.appendChild(pMarketplace);
+            divMenu.appendChild(pFeatures);
+            divMenu.appendChild(pIntegrations);
 
 
-    const doc = document.getElementById("singleMenuProduct");
-    doc.appendChild(divMenu);
+            const doc = document.getElementById("singleMenuProduct");
+            doc.appendChild(divMenu);
+        }
+        else{
+            const elem = document.getElementById("menuProductDekstopID");
+            elem.remove();
+        }
+    }else if(type === "menuCompany"){
+        if(!document.getElementById("menuProductDekstopID")){
+            const divMenu = document.createElement("div");
+            divMenu.className = "menuProductDekstop";
+            divMenu.id = "menuProductDekstopID";
+
+            const pAbout = document.createElement("p");
+            pAbout.innerText = "About";
+            pAbout.classList = "pTextMenuDesktop";
+
+            const pTeam = document.createElement("p");
+            pTeam.innerText = "Team";
+            pTeam.classList = "pTextMenuDesktop";
+
+            const pBlog = document.createElement("p");
+            pBlog.innerText = "Blog";
+            pBlog.classList = "pTextMenuDesktop";
+
+            const pCareers = document.createElement("p");
+            pCareers.innerText = "Careers";
+            pCareers.classList = "pTextMenuDesktop";
+
+            divMenu.appendChild(pAbout);
+            divMenu.appendChild(pTeam);
+            divMenu.appendChild(pBlog);
+            divMenu.appendChild(pCareers);
+
+
+            const doc = document.getElementById("singleMenuCompany");
+            doc.appendChild(divMenu);
+        }
+        else{
+            const elem = document.getElementById("menuProductDekstopID");
+            elem.remove();
+        }
+    }else if(type === "menuContent"){
+        if(!document.getElementById("menuProductDekstopID")){
+            const divMenu = document.createElement("div");
+            divMenu.className = "menuProductDekstop";
+            divMenu.id = "menuProductDekstopID";
+
+            const pContact = document.createElement("p");
+            pContact.innerText = "Contact";
+            pContact.classList = "pTextMenuDesktop";
+
+            const pNewsletter = document.createElement("p");
+            pNewsletter.innerText = "Newsletter";
+            pNewsletter.classList = "pTextMenuDesktop";
+
+            const pLinkedIn = document.createElement("p");
+            pLinkedIn.innerText = "LinkedIn";
+            pLinkedIn.classList = "pTextMenuDesktop";
+
+
+            divMenu.appendChild(pContact);
+            divMenu.appendChild(pLinkedIn);
+            divMenu.appendChild(pLinkedIn);
+
+
+            const doc = document.getElementById("singleMenuContent");
+            doc.appendChild(divMenu);
+        }
+        else{
+            const elem = document.getElementById("menuProductDekstopID");
+            elem.remove();
+        }
+    }
+
 
 }

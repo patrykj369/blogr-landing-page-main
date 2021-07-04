@@ -459,6 +459,17 @@ body{
         font-family: sans-serif;
     }
 
+    .singleMenu > p{
+        /* wylaczenie mozliwosci zaznaczania tekstu, nalezy na znaczniku tekstu wywolac */
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome, Edge, Opera and Firefox */
+    }
+
     .firstContent{
         margin-top: 3vh;
         padding: 20px;
@@ -644,7 +655,7 @@ body{
 
     .menuProductDekstop{
         width: 9rem;
-        min-height: 8rem;
+        min-height: 3rem;
         background-color: white;
         z-index: 1;
         position: absolute;
